@@ -186,5 +186,5 @@ def get_broker(list_key=Conf.PREFIX):
         return mongo.Mongo(list_key=list_key)
     # default to redis
     else:
-        from brokers import redis_broker
+        from django_q.brokers import redis_broker
         return redis_broker.Redis(list_key=list_key)
